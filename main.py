@@ -11,7 +11,9 @@ print("Starting")
 inviataMailPostoDisponibile = False
 inviataMailUniAggiornata = False
 
-link_calendario = "https://tolc.cisiaonline.it/calendario.php?tolc=ingegneria"
+mailer = emails.NewEmail()
+
+link_calendario = "https://tolc.cisiaonline.it/calendario.php?tolc=scienze"
 link_uni = "https://offertaformativa.unitn.it/it/l/matematica/iscriversi"
 
 
@@ -44,10 +46,9 @@ def controllaAggiornamentiUni():
 
 def mandaMail(testo):
     mail = os.environ.get('MAIL_CAMI')
-    mailer = emails.NewEmail()
     mail_body = {}
     mail_from = {
-        "name": "Giulio",
+        "name": "G ❤️",
         "email": "me@giuliopime.dev",
     }
     recipients = [
@@ -73,8 +74,10 @@ def mandaMail(testo):
 
 while True:
     print("Entered loop")
-    inviataMailPostoDisponibile = cercaPosto()
-    inviataMailUniAggiornata = controllaAggiornamentiUni()
+    if inviataMailPostoDisponibile is False:
+        inviataMailPostoDisponibile = cercaPosto()
+    if inviataMailUniAggiornata is False:
+        inviataMailUniAggiornata = controllaAggiornamentiUni()
     time.sleep(random.randint(120, 180))
     if inviataMailUniAggiornata is True and inviataMailUniAggiornata is True:
         exit(0)
