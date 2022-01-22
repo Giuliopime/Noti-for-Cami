@@ -6,6 +6,8 @@ import requests
 from bs4 import BeautifulSoup
 from mailersend import emails
 
+print("Starting")
+
 inviataMailPostoDisponibile = False
 inviataMailUniAggiornata = False
 
@@ -70,6 +72,7 @@ def mandaMail(testo):
 
 
 while True:
+    print("Entered loop")
     inviataMailPostoDisponibile = cercaPosto()
     inviataMailUniAggiornata = controllaAggiornamentiUni()
     time.sleep(random.randint(120, 180))
