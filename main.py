@@ -75,5 +75,3 @@ while True:
     time.sleep(random.randint(120, 180))
     if inviataMailUniAggiornata is True and inviataMailUniAggiornata is True:
         exit(0)
-
-#test heroku
