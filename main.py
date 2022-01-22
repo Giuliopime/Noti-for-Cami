@@ -9,7 +9,7 @@ from mailersend import emails
 inviataMailPostoDisponibile = False
 inviataMailUniAggiornata = False
 
-link_calendario = "https://tolc.cisiaonline.it/calendario.php?tolc=scienze"
+link_calendario = "https://tolc.cisiaonline.it/calendario.php?tolc=ingegneria"
 link_uni = "https://offertaformativa.unitn.it/it/l/matematica/iscriversi"
 
 
@@ -72,6 +72,6 @@ def mandaMail(testo):
 while True:
     inviataMailPostoDisponibile = cercaPosto()
     inviataMailUniAggiornata = controllaAggiornamentiUni()
-    time.sleep(random.randint(180, 300))
+    time.sleep(random.randint(120, 180))
     if inviataMailUniAggiornata is True and inviataMailUniAggiornata is True:
         exit(0)
