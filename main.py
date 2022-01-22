@@ -43,7 +43,7 @@ def controllaAggiornamentiUni():
     else:
         return False
 
-
+# test 2
 def mandaMail(testo):
     mail = os.environ.get('MAIL_CAMI')
     mail_body = {}
