@@ -13,7 +13,7 @@ inviataMailUniAggiornata = False
 
 mailer = emails.NewEmail()
 
-link_calendario = "https://tolc.cisiaonline.it/calendario.php?tolc=ingegneria"
+link_calendario = "https://tolc.cisiaonline.it/calendario.php?tolc=scienze"
 link_uni = "https://offertaformativa.unitn.it/it/l/matematica/iscriversi"
 
 
